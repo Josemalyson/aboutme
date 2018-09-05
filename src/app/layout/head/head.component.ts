@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-menu-component',
-  templateUrl: './menu-component.component.html',
-  styleUrls: ['./menu-component.component.css']
+  selector: 'app-head',
+  templateUrl: './head.component.html',
+  styleUrls: ['./head.component.css']
 })
-export class MenuComponentComponent implements OnInit {
+export class HeadComponent implements OnInit {
 
   closeResult: string;
 
@@ -33,5 +32,7 @@ export class MenuComponentComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  
 
 }
