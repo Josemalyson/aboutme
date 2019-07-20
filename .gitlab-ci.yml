@@ -1,0 +1,25 @@
+image: node:latest
+
+cache:
+  - ./node_moduels/
+
+before_script:
+  - npm install -g @angular/cli
+
+builder:
+  script:
+    - npm install
+    - ng build --prod --base-href "https://josemalyson.github.io/aboutme/"
+    artifacts:
+      paths:
+        - dist/
+
+pages:
+  stage: deploy
+  script:
+  - mv dist public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
